@@ -1,4 +1,5 @@
 {
+  
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+  "server": "cd ../backend/src && node app.js", 
+  "client": "cd ../frontend && npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -24,6 +28,7 @@
       "react-app",
       "react-app/jest"
     ]
+
   },
   "browserslist": {
     "production": [
@@ -36,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

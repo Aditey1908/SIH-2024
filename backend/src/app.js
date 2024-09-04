@@ -7,7 +7,10 @@ const truckRoutes = require('./routes/truckRoutes');
 const routeRoutes = require('./routes/routeRoutes');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
+
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());
 app.use('/trucks', truckRoutes);
