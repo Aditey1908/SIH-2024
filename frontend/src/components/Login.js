@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // We will create this CSS file for styling.
+import { auth, signInWithEmailAndPassword } from './firebaseConfig'; // Firebase import
+import './Login.css'; 
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        // Here you would typically check credentials, for now we'll just redirect
-        if (email && password) {
+        try {
+            // Firebase authentication
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            alert('Login successful');
+            console.log(userCredential.user);
             navigate('/dashboard'); // Redirects to the Dashboard page
-        } else {
-            alert('Please enter your email and password');
+        } catch (error) {
+            alert('Login failed: ' + error.message);
         }
     };
-    
 
     return (
         <div className="login-container">
