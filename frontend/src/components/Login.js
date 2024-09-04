@@ -11,11 +11,12 @@ function Login() {
         e.preventDefault();
         // Here you would typically check credentials, for now we'll just redirect
         if (email && password) {
-            navigate('/hello-world'); // Redirects to the Hello World page
+            navigate('/dashboard'); // Redirects to the Dashboard page
         } else {
             alert('Please enter your email and password');
         }
     };
+    
 
     return (
         <div className="login-container">
