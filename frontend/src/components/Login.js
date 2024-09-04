@@ -14,6 +14,7 @@ function Login() {
             // Firebase authentication
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             alert('Login successful');
+            localStorage.setItem('token', userCredential.user.accessToken);
             console.log(userCredential.user);
             navigate('/dashboard'); // Redirects to the Dashboard page
         } catch (error) {

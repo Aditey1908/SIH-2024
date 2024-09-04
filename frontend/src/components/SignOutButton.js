@@ -7,7 +7,7 @@ function SignOutButton() {
     const navigate = useNavigate();
 
     const handleSignOut = () => {
-        // Perform any sign-out logic here, such as clearing authentication tokens.
+        localStorage.removeItem('token');
         navigate('/');
     };
 
