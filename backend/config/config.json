@@ -1,0 +1,27 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "acousticsih1753",
+      "database": "truck_tracking_dev",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "postgres",
+      "password": "acousticsih1753",
+      "database": "truck_tracking_test",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "postgres",
+      "password": "acousticsih1753",
+      "database": "truck_tracking_prod",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "dialect": "postgres"
+    }
+  }
+  
