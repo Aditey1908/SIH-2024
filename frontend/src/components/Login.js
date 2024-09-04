@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, signInWithEmailAndPassword } from './firebaseConfig'; // Firebase import
+import { provider, signInWithPopup } from './firebaseConfig';
 import './Login.css'; 
 
 function Login() {
@@ -20,6 +21,15 @@ function Login() {
             alert('Login failed: ' + error.message);
         }
     };
+    const handleGoogleSignIn = async () => {
+        try {
+          const result = await signInWithPopup(auth, provider);
+          console.log('User signed in:', result.user);
+          // Redirect or handle the signed-in user
+        } catch (error) {
+          console.error('Google sign-in error:', error.message);
+        }
+      };
 
     return (
         <div className="login-container">
@@ -52,7 +62,7 @@ function Login() {
                     <button type="submit" className="login-btn">Sign In</button>
                     <div className="login-google">
                         <p>or</p>
-                        <button type="button" className="google-btn">Sign in with Google</button>
+                         <button onClick={handleGoogleSignIn} className="google-btn">Sign in with Google</button>
                     </div>
                 </form>
                 <p>Don’t have an account? <a href="/signup">Sign Up</a></p>
