@@ -24,8 +24,9 @@ function Login() {
     const handleGoogleSignIn = async () => {
         try {
           const result = await signInWithPopup(auth, provider);
+          localStorage.setItem('token', result.user.accessToken);
           console.log('User signed in:', result.user);
-          // Redirect or handle the signed-in user
+          navigate('/dashboard');
         } catch (error) {
           console.error('Google sign-in error:', error.message);
         }
