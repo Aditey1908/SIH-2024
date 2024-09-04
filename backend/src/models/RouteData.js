@@ -13,8 +13,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false
       }
-    }, {
-
+    },
+    {
+      timestamps: false
     });
   
     return RouteData; // Make sure to return the defined model here

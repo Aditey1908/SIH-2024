@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
       },
       total_capacity: DataTypes.INTEGER,
+    },
+    {
+      timestamps: false
     });
   
     return TruckInformation;

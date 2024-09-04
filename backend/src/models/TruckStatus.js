@@ -13,7 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       timeAt_last: DataTypes.DATE,
       timeAt_next: DataTypes.DATE,
       timeAt_current: DataTypes.DATE,
-    });
+    },
+      {
+        timestamps: false
+      });
   
     return TruckStatus;
   };

@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
       end_location: DataTypes.STRING,
       est_departure: DataTypes.DATE,
       est_arrival: DataTypes.DATE,
+    },
+    {
+      timestamps: false
     });
   
     return MasterDatabase;
