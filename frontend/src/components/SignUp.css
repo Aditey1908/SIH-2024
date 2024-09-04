@@ -1,0 +1,99 @@
+/* SignUp.css */
+
+.signup-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.signup-left {
+  width: 50%;
+  padding: 40px;
+  background-color: #f39c12;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-left h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.signup-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.signup-left p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.signup-left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-left label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.signup-left input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-btn {
+  padding: 12px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.signup-google {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-google p {
+  margin: 10px 0;
+}
+
+.google-btn {
+  background-color: white;
+  color: #e67e22;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-right {
+  width: 50%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.moving-truck-image {
+  width: 80%;
+}
+
+.moving-text {
+  font-size: 24px;
+  color: #e74c3c;
+  margin-top: 20px;
+}

@@ -4,6 +4,7 @@ import ActionDashboard from './components/ActionDashboard';
 import AnalyticsDashboard from './components/AnalyticsDashboard';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
+import SignUp from './components/SignUp';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/action-dashboard" element={<ActionDashboard />} />
                 <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
+                <Route path="/signup" element={<SignUp />} />
             </Routes>
         </Router>
     );
