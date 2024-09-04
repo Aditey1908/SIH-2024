@@ -1,5 +1,6 @@
 import React from 'react';
-import './ActionDashboard.css'; // Create this CSS file for styling.
+import './ActionDashboard.css';
+import SignOutButton from './SignOutButton'; // Import the SignOutButton
 
 function ActionDashboard() {
     return (
@@ -16,7 +17,7 @@ function ActionDashboard() {
             <main className="main-content">
                 <header className="header">
                     <h1>Action Dashboard</h1>
-                    <p>September 5, 2024</p>
+                    <SignOutButton /> {/* Add the SignOutButton to the top-right corner */}
                 </header>
                 <section className="action-buttons">
                     <button className="action-button">Tyre Burst</button>

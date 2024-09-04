@@ -1,5 +1,6 @@
 import React from 'react';
-import './Dashboard.css'; // Create this CSS file for styling.
+import './Dashboard.css';
+import SignOutButton from './SignOutButton'; // Import the SignOutButton component.
 
 function Dashboard() {
     return (
@@ -20,7 +21,7 @@ function Dashboard() {
             <main className="main-content">
                 <header className="header">
                     <h1>Dashboard</h1>
-                    <p>March 24, 2022</p>
+                    <SignOutButton /> {/* Add the SignOutButton to the top-right corner */}
                 </header>
                 <section className="stats-cards">
                     <div className="card">

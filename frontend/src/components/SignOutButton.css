@@ -1,0 +1,26 @@
+/* src/components/SignOutButton.css */
+.signout-button {
+  background-color: #3498db; /* A calming blue color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signout-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.signout-button:active {
+  background-color: #1f618d; /* Even darker blue on click */
+  transform: translateY(0); /* Reset the lift when clicked */
+}
