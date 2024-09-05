@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, provider, signInWithEmailAndPassword, signInWithPopup } from './firebaseConfig'; // Firebase import
 import './Login.css';
+import truckImage from '../images/Login_img.jpg'; // Importing the image
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate();
     const [rememberMe, setRememberMe] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const savedEmail = localStorage.getItem('email');
         const savedPassword = localStorage.getItem('password');
         if (savedEmail && savedPassword) {
-          setEmail(savedEmail);
-          setPassword(savedPassword);
+            setEmail(savedEmail);
+            setPassword(savedPassword);
         }
-      }, []);
+    }, []);
 
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            // Firebase authentication
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             alert('Login successful');
             localStorage.setItem('token', userCredential.user.accessToken);
@@ -30,28 +30,26 @@ function Login() {
                 localStorage.setItem('email', email);
                 localStorage.setItem('password', password);
             }
-            console.log(userCredential.user);
-            navigate('/dashboard'); // Redirects to the Dashboard page
+            navigate('/dashboard');
         } catch (error) {
             alert('Login failed: ' + error.message);
         }
     };
+
     const handleGoogleSignIn = async () => {
         try {
-          const result = await signInWithPopup(auth, provider);
-          localStorage.setItem('token', result.user.accessToken);
-          console.log('User signed in:', result.user);
-          navigate('/dashboard');
+            const result = await signInWithPopup(auth, provider);
+            localStorage.setItem('token', result.user.accessToken);
+            navigate('/dashboard');
         } catch (error) {
-          console.error('Google sign-in error:', error.message);
+            console.error('Google sign-in error:', error.message);
         }
-      };
+    };
 
     return (
         <div className="login-container">
             <div className="login-left">
                 <h1>iHAUL!</h1>
-                <h2>Welcome back!</h2>
                 <p>Enter your Credentials to access your account</p>
                 <form onSubmit={handleLogin}>
                     <label>Email address</label>
@@ -60,6 +58,7 @@ function Login() {
                         placeholder="Enter your email" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
                     <label>Password</label>
                     <input 
@@ -67,29 +66,31 @@ function Login() {
                         placeholder="Enter your password" 
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        required
                     />
                     <div className="login-options">
                         <label>
+                        <p>Remember Me</p>
                             <input 
                                 type="checkbox"
                                 checked={rememberMe} 
                                 onChange={(e) => setRememberMe(e.target.checked)}
                              />
-                            Remember Me
+                            
                         </label>
                         <a href="/reset-password">Forgot password?</a>
                     </div>
                     <button type="submit" className="login-btn">Sign In</button>
                     <div className="login-google">
                         <p>or</p>
-                         <button onClick={handleGoogleSignIn} className="google-btn">Sign in with Google</button>
+                         <button type="button" onClick={handleGoogleSignIn} className="google-btn">Sign in with Google</button>
                     </div>
                 </form>
                 <p>Don’t have an account? <a href="/signup">Sign Up</a></p>
             </div>
             <div className="login-right">
-                <img src="moving-truck.png" alt="We are moving" className="moving-truck-image"/>
-                <p className="moving-text">We are moving</p>
+                <img src={truckImage}  className="moving-truck-image" />
+                
             </div>
         </div>
     );
