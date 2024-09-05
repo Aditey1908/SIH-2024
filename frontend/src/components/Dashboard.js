@@ -9,13 +9,13 @@ function Dashboard() {
                 <div className="logo">Dashly X</div>
                 <ul className="menu">
                     <li>Dashboard</li>
-                    <li>Features</li>
-                    <li>Users</li>
-                    <li>Pricing</li>
+                    <li>Profile</li>
+                    <li>Your Bookings</li>
+                    <li>History</li>
                     <li>Integrations</li>
                     <li>Settings</li>
-                    <li>Utility pages</li>
-                    <li>Template pages</li>
+                    <li>Support</li>
+                    <li>About</li>
                 </ul>
             </aside>
             <main className="main-content">
