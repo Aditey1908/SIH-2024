@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, provider, signInWithEmailAndPassword, signInWithPopup } from './firebaseConfig'; // Firebase import
 import './Login.css';
@@ -7,6 +8,16 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const [rememberMe, setRememberMe] = useState(false);
+
+    useEffect(() => {
+        const savedEmail = localStorage.getItem('email');
+        const savedPassword = localStorage.getItem('password');
+        if (savedEmail && savedPassword) {
+          setEmail(savedEmail);
+          setPassword(savedPassword);
+        }
+      }, []);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -15,6 +26,10 @@ function Login() {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             alert('Login successful');
             localStorage.setItem('token', userCredential.user.accessToken);
+            if (rememberMe) {
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', password);
+            }
             console.log(userCredential.user);
             navigate('/dashboard'); // Redirects to the Dashboard page
         } catch (error) {
@@ -55,7 +70,11 @@ function Login() {
                     />
                     <div className="login-options">
                         <label>
-                            <input type="checkbox" />
+                            <input 
+                                type="checkbox"
+                                checked={rememberMe} 
+                                onChange={(e) => setRememberMe(e.target.checked)}
+                             />
                             Remember Me
                         </label>
                         <a href="/reset-password">Forgot password?</a>
