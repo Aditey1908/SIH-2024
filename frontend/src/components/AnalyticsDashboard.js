@@ -1,65 +1,74 @@
 import React from 'react';
-import './AnalyticsDashboard.css';
-import SignOutButton from './SignOutButton'; // Import the SignOutButton
+import './Dashboard.css';
+import SignOutButton from './SignOutButton';
 
-function AnalyticsDashboard() {
+function Dashboard() {
     return (
-        <div className="analytics-dashboard-container">
-            <aside className="sidebar">
-                <div className="logo">Analytics Hub</div>
+        <div className="dashboard-container">
+            {/* Horizontal navigation bar */}
+            <nav className="navbar">
+                <div className="logo">Dashly X</div>
                 <ul className="menu">
-                    <li>Dashboard</li>
-                    <li>Reports</li>
-                    <li>Insights</li>
-                    <li>Settings</li>
+                    <li>Truck Details</li>
+                    <li>Live Tracking</li>
+                    <li>Latest Updates</li>
                 </ul>
-            </aside>
+                <div className="signout">
+                    <SignOutButton /> {/* Log Out Button */}
+                </div>
+            </nav>
+
             <main className="main-content">
                 <header className="header">
-                    <h1>Analytics Dashboard</h1>
-                    <SignOutButton /> {/* Add the SignOutButton to the top-right corner */}
+                    <h1>Dashboard</h1>
                 </header>
-                <section className="stats-cards">
-                    <div className="card">
-                        <div className="card-info">
-                            <h2>75.2K</h2>
-                            <p>Visitors</p>
+
+                <div className="dashboard-sections">
+                    {/* Recent Orders Section */}
+                    <div className="section-card booking-summary">
+                        <h2>Recent Orders</h2>
+                        <ul>
+                            <li><strong>Order #4521:</strong> 25 packages of 800cm^3 from Mumbai to Vapi</li>
+                            <li><strong>Order #4522:</strong> 50 crates of 400cm^3 from Delhi to Chandigarh</li>
+                            <li><strong>Order #4523:</strong> 7 packages of 12m³ from Chennai to Bangaluru</li>
+                        </ul>
+                    </div>
+
+                    {/* Package Status Section */}
+                    <div className="section-card package-status">
+                        <h2>Package Status</h2>
+                        <ul>
+                            <li><strong>Order #4521:</strong> In Transit</li>
+                            <li><strong>Order #4522:</strong> Delivered</li>
+                            <li><strong>Order #4523:</strong> Pending Pickup</li>
+                        </ul>
+                    </div>
+
+                    {/* Transactions Section */}
+                    <div className="section-card transactions-summary">
+                        <h2>Transactions</h2>
+                        <div className="transaction-card">
+                            <h3>Total Revenue</h3>
+                            <p>$45K</p>
+                        </div>
+                        <div className="transaction-card">
+                            <h3>Total Orders</h3>
+                            <p>120</p>
                         </div>
                     </div>
-                    <div className="card">
-                        <div className="card-info">
-                            <h2>12.3K</h2>
-                            <p>New Leads</p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-info">
-                            <h2>8.4K</h2>
-                            <p>Conversions</p>
-                        </div>
-                    </div>
-                </section>
+                </div>
+
                 <section className="chart">
-                    <h2>Sales Overview</h2>
+                    <h2>Monthly Truck Utilization</h2>
                     <div className="chart-placeholder">
-                        {/* Replace with an actual chart */}
                         <p>Chart goes here</p>
                     </div>
                 </section>
-                <section className="additional-charts">
-                    <div className="chart">
-                        <h2>User Engagement</h2>
-                        <div className="chart-placeholder">
-                            {/* Replace with an actual chart */}
-                            <p>Chart goes here</p>
-                        </div>
-                    </div>
-                    <div className="chart">
-                        <h2>Revenue Trends</h2>
-                        <div className="chart-placeholder">
-                            {/* Replace with an actual chart */}
-                            <p>Chart goes here</p>
-                        </div>
+
+                <section className="map-section">
+                    <h2>Live Truck Locations</h2>
+                    <div className="map-placeholder">
+                        <p>Map goes here</p>
                     </div>
                 </section>
             </main>
@@ -67,4 +76,4 @@ function AnalyticsDashboard() {
     );
 }
 
-export default AnalyticsDashboard;
+export default Dashboard;

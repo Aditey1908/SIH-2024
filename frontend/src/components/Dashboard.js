@@ -11,8 +11,7 @@ function Dashboard() {
                 <ul className="menu">
                     <li>Services</li>
                     <li>About Us</li>
-                    <li>Track</li>
-                    <li>Support</li>
+                        <li>Support</li>
                     <li>Ship Now</li>
                 </ul>
                 <div className="signout">
