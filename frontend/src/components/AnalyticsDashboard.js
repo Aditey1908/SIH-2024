@@ -48,7 +48,7 @@ function Dashboard() {
                     <div className="section-card transactions-summary">
                         <h2>Transactions</h2>
                         <div className="transaction-card">
-                            <h3>Total Revenue</h3>
+                            <h3>Last Transaction</h3>
                             <p>$45K</p>
                         </div>
                         <div className="transaction-card">
