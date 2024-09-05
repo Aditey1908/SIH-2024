@@ -4,56 +4,47 @@
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f0f4f8, #e5ecf4);
+  background: linear-gradient(135deg, #eef2f3, #d4dde0); /* Light background with subtle contrast */
 }
 
 /* Navbar Styling */
 .navbar {
-  background: linear-gradient(90deg, #457b9d, #1d3557);
+  background: linear-gradient(90deg, #3a6ea5, #14213d); /* Deeper colors for a bold effect */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 3.5rem; /* Increased padding for a wider navbar */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Darker shadow for more depth */
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Larger logo */
   font-weight: bold;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1rem;
   color: #f1faee;
 }
 
 .menu {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .menu li {
   cursor: pointer;
   color: #f1faee;
   transition: color 0.3s ease, transform 0.3s;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for menu items */
 }
 
 .menu li:hover {
-  color: #a8dadc;
+  background-color: #fca311; /* Vibrant hover effect */
+  color: #14213d;
   transform: scale(1.05);
-}
-
-/* Adjusted Menu Items */
-.menu li {
-  color: #f1faee;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.menu li:hover {
-  background-color: #a8dadc;
-  color: #1d3557;
 }
 
 /* Signout button */
@@ -66,70 +57,66 @@
   transition: transform 0.3s;
 }
 
-.signout:hover {
-  transform: scale(1.1);
-}
 
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: 2.5rem;
+  padding: 3rem;
   background-color: #f7f9fc;
-  border-radius: 15px 15px 0 0;
-  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 25px 25px 0 0; /* More rounded corners for a smoother feel */
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Headers */
 .header h1 {
-  font-size: 2rem;
-  color: #1d3557;
-  margin-bottom: 1.5rem;
-  border-left: 5px solid #457b9d;
-  padding-left: 1rem;
+  font-size: 2.4rem;
+  color: #14213d;
+  margin-bottom: 1.8rem;
+  border-left: 6px solid #3a6ea5;
+  padding-left: 1.5rem;
 }
 
 /* Grid Layout for Sections */
 .dashboard-sections {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 /* Card for Each Section */
 .section-card {
   background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem;
+  border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   text-align: center;
+  border-top: 5px solid #3a6ea5; /* Accent color at the top of each card */
 }
 
 .section-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-7px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .section-card h2 {
-  font-size: 1.8rem;
-  color: #1d3557;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #14213d;
+  margin-bottom: 1.8rem;
   text-transform: uppercase;
 }
 
 /* Booking Summary, Package Status, and Transactions Cards */
-.booking-summary,
-.package-status,
-.transactions-summary {
-  background-color: #f8edeb;
+.booking-summary {
+  background-color: #f8edeb; /* Soft pastel */
 }
 
 .package-status {
-  background-color: #fae1dd;
+  background-color: #fae1dd; /* Muted coral */
 }
 
 .transactions-summary {
-  background-color: #ffcad4;
+  background-color: #ffcad4; /* Soft pink */
 }
 
 /* List for Booking Summary */
@@ -142,42 +129,43 @@
 .booking-summary li,
 .package-status li {
   background-color: white;
-  padding: 1rem 1.5rem;
-  margin-bottom: 0.8rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
 }
 
 .booking-summary li:hover,
 .package-status li:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 /* Transaction Cards */
 .transaction-card {
   flex: 1;
   background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem;
+  border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s;
+  border-top: 5px solid #ffcad4; /* Accent color */
 }
 
 .transaction-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-7px);
 }
 
 .transaction-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #1d3557;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .transaction-card p {
-  font-size: 2rem;
-  color: #457b9d;
+  font-size: 2.2rem;
+  color: #3a6ea5;
   font-weight: bold;
 }
 
@@ -189,10 +177,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
   color: #1d3557;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }

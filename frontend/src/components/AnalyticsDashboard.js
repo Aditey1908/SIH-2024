@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dashboard.css';
+import './AnalyticsDashboard.css';
 import SignOutButton from './SignOutButton';
 
 function Dashboard() {
@@ -9,6 +9,7 @@ function Dashboard() {
             <nav className="navbar">
                 <div className="logo">Dashly X</div>
                 <ul className="menu">
+                    <li>Book a truck</li>
                     <li>Truck Details</li>
                     <li>Live Tracking</li>
                     <li>Latest Updates</li>
