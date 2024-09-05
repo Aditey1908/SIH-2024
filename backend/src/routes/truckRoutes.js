@@ -3,5 +3,5 @@ const router = express.Router();
 const truckController = require('../controllers/truckController');
 
 router.get('/status/:truckId', truckController.getTruckStatus);
-
+router.post('/status/:truckId', truckController.getTruckStatus);
 module.exports = router;
