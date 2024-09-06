@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './AnalyticsDashboard.css';
 import SignOutButton from './SignOutButton';
 
 function Dashboard() {
+    const [startLocation, setStartLocation] = useState('');
+    const [endLocation, setEndLocation] = useState('');
+    const [space, setSpace] = useState('');
+    const [cost, setCost] = useState(0);
+
+    const bookingFormRef = useRef(null); // Create a ref for the booking section
+
+    const handleBookingSubmit = (e) => {
+        e.preventDefault();
+        const calculatedCost = calculateCost(space);
+        setCost(calculatedCost);
+        // Submit booking information to the backend if required
+    };
+
+    const calculateCost = (selectedSpace) => {
+        const costPerUnitSpace = 50; // Example cost per unit of space
+        return selectedSpace * costPerUnitSpace;
+    };
+
+    const scrollToBookingForm = () => {
+        bookingFormRef.current?.scrollIntoView({ behavior: 'smooth' }); // Scroll to the booking form
+    };
+
     return (
         <div className="dashboard-container">
             {/* Horizontal navigation bar */}
             <nav className="navbar">
                 <div className="logo">Dashly X</div>
                 <ul className="menu">
-                    <li>Book a truck</li>
+                    <li onClick={scrollToBookingForm}>Book a Truck</li> {/* Scroll to booking form on click */}
                     <li>Truck Details</li>
                     <li>Live Tracking</li>
                     <li>Latest Updates</li>
@@ -72,6 +95,61 @@ function Dashboard() {
                         <p>Map goes here</p>
                     </div>
                 </section>
+
+                {/* Booking Form */}
+                <section ref={bookingFormRef} className="booking-form"> {/* Attach ref to this section */}
+                    <h2>Book a Truck</h2>
+                    <form onSubmit={handleBookingSubmit}>
+                        <div>
+                            <label>Start Location:</label>
+                            <input
+                                type="text"
+                                value={startLocation}
+                                onChange={(e) => setStartLocation(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label>End Location:</label>
+                            <input
+                                type="text"
+                                value={endLocation}
+                                onChange={(e) => setEndLocation(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label>Amount of Space : </label>
+                            <select
+                                value={space}
+                                onChange={(e) => setSpace(e.target.value)}
+                                required
+                            >
+                                <option value="">Select space</option>
+                                <option value="5">5m³</option>
+                                <option value="10">10m³</option>
+                                <option value="15">15m³</option>
+                                <option value="20">20m³</option>
+                                <option value="25">25m³</option>
+                                <option value="30">30m³</option>
+                                {/* Add more options as needed */}
+                            </select>
+                        </div>
+                        <button type="submit">Calculate Cost</button>
+                    </form>
+                    {cost > 0 && (
+                        <div className="calculated-cost">
+                            <h3>Estimated Cost: ${cost}</h3>
+                        </div>
+                    )}
+                </section>
+                 {/* Placeholder for the map */}
+        <section className="map-section">
+          <h2>Live Truck Locations</h2>
+          <div className="map-placeholder">
+            <p>Map goes here</p>
+          </div>
+        </section>
             </main>
         </div>
     );
