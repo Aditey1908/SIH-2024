@@ -9,7 +9,7 @@
 
 /* Sidebar styles */
 .sidebar {
-  width: 1500px;
+  width: 100%;
   background-color: #1d3557; /* Darker tone for contrast */
   color: white;
   padding: 30px 20px;
