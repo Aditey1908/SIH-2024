@@ -54,7 +54,7 @@ function SignUp() {
                     <button type="submit" className="signup-btn">Create</button>
                     <div className="signup-google">
                         <p>or</p>
-                        <button className="google-btn"><a1>Sign in with </a1><a2>G</a2><a3>O</a3><a4>O</a4><a5>G</a5><a6>L</a6><a7>E</a7></button>
+                        <button className="google-btn"><a1>Sign in with </a1><a2>G</a2><a3>o</a3><a4>o</a4><a5>g</a5><a6>l</a6><a7>e</a7></button>
                     </div>
                 </form>
                 <p>Already have an account? <a href="/">Sign In</a></p>
