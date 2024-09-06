@@ -159,19 +159,26 @@ function Dashboard() {
 
         {/* Support section */}
         <section ref={supportRef} className="support-section">
-          <h2>Support</h2>
-          <p>If you need any assistance, please contact our support team at support@example.com or call 1-800-123-456.</p>
-        </section>
+  <h2>Support</h2>
+  <p>If you need any assistance, please contact our support team at <a href="mailto:support@example.com">support@example.com</a> or call <a href="tel:1-800-123-456">1-800-123-456</a>.</p>
+</section>
+
 
         {/* About section */}
         <section ref={aboutRef} className="about-section">
-          <h2>About Us</h2>
-          <p>Ihaul is India’s first partial space renting solution for trucks, powered by India Post. We are revolutionizing logistics by offering a seamless way for businesses and individuals to rent out unused space in trucks, maximizing efficiency and reducing waste in transportation. With Ihaul, you can optimize every journey by sharing cargo space, making logistics more accessible and cost-effective for all.</p>
+  <h2>About Us</h2>
+  <p>
+    Ihaul is India’s first partial space renting solution for trucks, powered by India Post. We are revolutionizing logistics by offering a seamless way for businesses and individuals to rent out unused space in trucks, maximizing efficiency and reducing waste in transportation. With Ihaul, you can optimize every journey by sharing cargo space, making logistics more accessible and cost-effective for all.
+  </p>
+  <p>
+    Since our inception, we have rapidly expanded, leveraging India Post’s extensive network to reach even the most remote corners of the country. With a presence in every state and over 18,600 pin codes, Ihaul ensures that businesses and individuals can easily access our services. Our cutting-edge technology, integrated with India Post’s robust infrastructure, enables us to deliver timely and reliable solutions, 24 hours a day, 7 days a week.
+  </p>
+  <p>
+    Our network includes 24 automated sort centres, 94 gateways, 2,880 direct delivery centres, and a growing team of logistics experts. This vast setup allows us to serve the logistics needs of businesses with unparalleled flexibility and speed. Ihaul is paving the way for a new era of logistics, where every truck on the road is used to its full potential.
+  </p>
+  <a href="#services" className="cta-button">Explore Our Services</a>
+</section>
 
-<p>Since our inception, we have rapidly expanded, leveraging India Post’s extensive network to reach even the most remote corners of the country. With a presence in every state and over 18,600 pin codes, Ihaul ensures that businesses and individuals can easily access our services. Our cutting-edge technology, integrated with India Post’s robust infrastructure, enables us to deliver timely and reliable solutions, 24 hours a day, 7 days a week.</p>
-
-<p>Our network includes 24 automated sort centres, 94 gateways, 2,880 direct delivery centres, and a growing team of logistics experts. This vast setup allows us to serve the logistics needs of businesses with unparalleled flexibility and speed. Ihaul is paving the way for a new era of logistics, where every truck on the road is used to its full potential.</p>
-        </section>
       </main>
     </div>
   );
