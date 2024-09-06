@@ -35,7 +35,7 @@ function Dashboard() {
         <div className="dashboard-container">
             {/* Horizontal navigation bar */}
             <nav className="navbar">
-                <div className="logo">Dashly X</div>
+                <div className="logo">iHaul</div>
                 <ul className="menu">
                     <li onClick={scrollToBookingForm}>Book a Truck</li>
                     <li>Truck Details</li>
