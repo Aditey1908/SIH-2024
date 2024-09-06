@@ -56,7 +56,7 @@ function SignUp() {
                         <button className="google-btn">Sign in with Google</button>
                     </div>
                 </form>
-                <p>Have an account? <a href="/login">Sign In</a></p>
+                <p>Have an account? <a href="/">Sign In</a></p>
             </div>
             <div className="signup-right">
                 <img src="moving-truck.png" alt="We are moving" className="moving-truck-image"/>

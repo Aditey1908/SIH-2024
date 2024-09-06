@@ -1,11 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
+const bodyParser = require('body-parser');
 const socketIo = require('socket.io');
 const db = require('./models'); // Import the db object that contains sequelize and models
 const truckRoutes = require('./routes/truckRoutes');
 const routeRoutes = require('./routes/routeRoutes');
-
+const monetizationRoutes = require('./routes/monetizationRoutes');
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -16,8 +17,10 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(bodyParser.json());
 app.use('/trucks', truckRoutes);
 app.use('/routes', routeRoutes);
+app.use('/monetization', monetizationRoutes);
 
 // Define a route to handle GET requests to the root URL
 app.get('/', (req, res) => {
@@ -36,9 +39,10 @@ io.on('connection', (socket) => {
 });
 
 // Sync database and start the server
+
 db.sequelize.sync().then(() => {
   console.log('Database synced successfully.');
-  server.listen(port, () => {
+  app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
   });
 }).catch(err => {
