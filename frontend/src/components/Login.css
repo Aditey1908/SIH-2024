@@ -69,7 +69,10 @@
   display: flex;
   align-items: center;
   font-size: 14px;
+  color: #dfe6e9;
+  white-space: nowrap;
 }
+
 
 .login-options p {
   margin-right: 10px;
@@ -77,7 +80,8 @@
 }
 
 .login-options input[type="checkbox"] {
-  margin-right: 10px;
+  margin-left: 0px; /* Space between "Remember Me" and the checkbox */
+  margin-top:18px;
 }
 
 .login-options a {
