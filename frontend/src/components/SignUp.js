@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import truckImage from '../images/Login_img.jpg';
 import { auth, createUserWithEmailAndPassword } from './firebaseConfig'; // Firebase import for sign-up
 import './SignUp.css'; // Import the styling
-import truckImage from '../images/Login_img.jpg';
 
 function SignUp() {
     const [email, setEmail] = useState('');
@@ -57,7 +57,7 @@ function SignUp() {
                         <button className="google-btn"><a1>Sign in with </a1><a2>G</a2><a3>O</a3><a4>O</a4><a5>G</a5><a6>L</a6><a7>E</a7></button>
                     </div>
                 </form>
-                <p>Already have an account? <a href="/login">Sign In</a></p>
+                <p>Already have an account? <a href="/">Sign In</a></p>
             </div>
             <div className="signup-right">
             <img src={truckImage}  className="moving-truck-image" />
