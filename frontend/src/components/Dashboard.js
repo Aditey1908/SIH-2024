@@ -34,7 +34,7 @@ function Dashboard() {
     <div className="dashboard-container">
       {/* Sidebar navigation */}
       <aside className="sidebar">
-        <div className="logo">Dashly X</div>
+        <div className="logo">iHaul</div>
         <ul className="menu">
           <li>Profile</li>
           <li onClick={() => scrollToSection(recentBookingsRef)}>Recent Bookings</li>

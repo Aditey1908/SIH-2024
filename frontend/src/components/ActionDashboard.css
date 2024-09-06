@@ -1,104 +1,83 @@
-/* Action Dashboard Container */
-.action-dashboard-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #eef2f3, #d4dde0); /* Same soft background */
-}
-
-/* Sidebar Styling */
-.sidebar {
-  width: 20%;
-  background: linear-gradient(90deg, #3a6ea5, #14213d);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  box-shadow: 6px 0 20px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
-}
-
-.logo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #f1faee;
-  margin-bottom: 3rem;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu li {
-  margin-bottom: 2rem;
-  font-size: 1.3rem;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent for menu items */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s;
-}
-
-.menu li:hover {
-  background-color: #fca311; /* Vibrant hover effect */
-  color: #14213d;
-  transform: scale(1.05);
-}
-
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: 3rem;
-  background-color: #f7f9fc;
-  border-radius: 25px 0 0 0; /* Rounded top-left corner */
-  box-shadow: -4px -4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Styling */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  color: #14213d;
-  border-left: 6px solid #3a6ea5;
-  padding-left: 1.5rem;
-}
-
-/* Action Buttons Section */
-.action-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-/* Individual Action Buttons */
+/* Styling for the action buttons with dark colors */
 .action-button {
-  padding: 1.5rem;
-  font-size: 1.2rem;
+  padding: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #ffffff;
-  color: #14213d;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  border-top: 5px solid #3a6ea5; /* Accent color */
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Specific dark colors for the reasons */
+.action-button.reason-1 {
+  background-color: #2d3436; /* Dark Gray */
+  border-top: 6px solid #1a1e21;
+}
+
+.action-button.reason-2 {
+  background-color: #4b6584; /* Dark Blue */
+  border-top: 6px solid #2e3b50;
+}
+
+.action-button.reason-3 {
+  background-color: #30336b; /* Dark Purple */
+  border-top: 6px solid #202346;
+}
+
+.action-button.reason-4 {
+  background-color: #6c5ce7; /* Violet */
+  border-top: 6px solid #483fa3;
+}
+
+.action-button.reason-5 {
+  background-color: #b33939; /* Dark Red */
+  border-top: 6px solid #8e2828;
+}
+
+.action-button.reason-6 {
+  background-color: #2f3640; /* Almost Black */
+  border-top: 6px solid #1f2428;
+}
+
+.action-button.reason-7 {
+  background-color: #3b3b98; /* Deep Indigo */
+  border-top: 6px solid #2b2b73;
+}
+
+.action-button.reason-8 {
+  background-color: #0a3d62; /* Dark Cyan */
+  border-top: 6px solid #062840;
+}
+
+/* Hover effects */
 .action-button:hover {
-  background-color: #fca311;
-  color: white;
-  transform: translateY(-5px);
+  transform: translateY(-7px);
 }
 
 .action-button:active {
   transform: translateY(0);
+}
+
+/* Grid layout for two vertical columns */
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2rem; /* Space between buttons */
+}
+
+/* Helpline number styling */
+.helpline {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #fca311;
+  text-align: center;
+  font-weight: bold;
+  background-color: #1d3557;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
