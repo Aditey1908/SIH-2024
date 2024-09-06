@@ -88,9 +88,9 @@ function Dashboard() {
         <section ref={recentBookingsRef} className="booking-summary">
           <h2>Recent Bookings</h2>
           <ul>
-            <li><strong>Booking #4521:</strong> 10m³ space from NY to LA</li>
-            <li><strong>Booking #4522:</strong> 8m³ space from SF to Chicago</li>
-            <li><strong>Booking #4523:</strong> 12m³ space from Miami to Dallas</li>
+            <li><strong>Booking #4521:</strong> 10 packages of 10m³ from Mumbai to Ahmedabad</li>
+            <li><strong>Booking #4522:</strong> 7 packages of 8m³ from Indore to Bhopal</li>
+            <li><strong>Booking #4523:</strong> 12 packages of 5m³ space from Delhi to Chandigarh</li>
           </ul>
         </section>
 
