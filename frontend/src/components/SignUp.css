@@ -36,6 +36,9 @@
   margin-bottom: 20px;
   color: #dfe6e9;
 }
+.signup-left a{
+  color: orange;
+}
 
 .signup-left form {
   margin-top: 20px;
@@ -72,16 +75,21 @@
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
-
+.signup-google p{
+  font-size: 16px;
+  margin-top: 10px;;
+}
 .signup-btn:hover {
-  background-color: #005bb5; /* Hover effect similar to login */
+  
+  background-color: black; /* Hover effect similar to login */
 }
 
 /* Google Button */
 .google-btn {
-  background-color: #db4437; /* Same Google button color as in login */
-  color: white;
+  background-color: white; /* Same Google button color as in login */
+  color: black;
   padding: 15px;
   margin-top: 20px;
   border: none;
@@ -91,8 +99,33 @@
   transition: background-color 0.3s ease;
 }
 
+.google-btn a1 { /* Google red */
+  color: black;
+  margin-top: 20px;
+}
+.google-btn a2{
+  color: #4285f4;
+}
+.google-btn a3{
+  color: #ea4335;
+}
+.google-btn a4{
+  color: #fbbc05;
+}
+.google-btn a5{
+  color: #4285f4;
+}
+.google-btn a6{
+  color: #34a853;
+}
+.google-btn a7{
+  color: #ea4335;
+}
 .google-btn:hover {
-  background-color: #c33c28; /* Consistent hover color */
+  background-color: black;
+}
+.google-btn:hover a1{
+  color: white;
 }
 
 .signup-google {
