@@ -184,3 +184,41 @@
   font-weight: bold;
   font-size: 1.3rem;
 }
+/* Styling for the select dropdown */
+select {
+  width: 100%;
+  padding: 0.8rem 1.2rem;  /* Padding for a comfortable input size */
+  border: 2px solid #3a6ea5;  /* Border color matching your primary accent */
+  border-radius: 8px;  /* Smooth rounded corners */
+  background-color: #f7f9fc;  /* Light background color */
+  color: #14213d;  /* Dark text color */
+  font-size: 1.2rem;  /* Font size for readability */
+  font-family: 'Poppins', sans-serif;  /* Consistent font with the rest of your app */
+  appearance: none;  /* Removes default arrow for custom styling */
+  cursor: pointer;  /* Changes cursor to pointer to indicate clickable element */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Light shadow for depth */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;  /* Adds space below the select dropdown */
+}
+
+/* Styling for the select dropdown when focused */
+select:focus {
+  border-color: #fca311;  /* Highlight border on focus */
+  outline: none;  /* Removes default browser outline */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Slightly more prominent shadow on focus */
+}
+
+/* Styling for the dropdown options */
+option {
+  background-color: #ffffff;  /* White background for options */
+  color: #14213d;  /* Dark text color */
+  padding: 0.8rem;  /* Padding to make options easier to select */
+  font-size: 1rem;  /* Adjusting font size slightly for options */
+  font-family: 'Poppins', sans-serif;  /* Same font for consistency */
+}
+
+/* Adjusts the appearance for webkit-based browsers */
+select::-webkit-inner-spin-button,
+select::-webkit-calendar-picker-indicator {
+  display: none;
+}
