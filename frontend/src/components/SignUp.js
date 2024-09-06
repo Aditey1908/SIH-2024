@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import truckImage from '../images/Login_img.jpg';
 import { auth, createUserWithEmailAndPassword } from './firebaseConfig'; // Firebase import for sign-up
 import './SignUp.css'; // Import the styling
 
@@ -53,14 +54,13 @@ function SignUp() {
                     <button type="submit" className="signup-btn">Create</button>
                     <div className="signup-google">
                         <p>or</p>
-                        <button className="google-btn">Sign in with Google</button>
+                        <button className="google-btn"><a1>Sign in with </a1><a2>G</a2><a3>o</a3><a4>o</a4><a5>g</a5><a6>l</a6><a7>e</a7></button>
                     </div>
                 </form>
-                <p>Have an account? <a href="/">Sign In</a></p>
+                <p>Have an account? <a href="/login">Sign In</a></p>
             </div>
             <div className="signup-right">
-                <img src="moving-truck.png" alt="We are moving" className="moving-truck-image"/>
-                <p className="moving-text">We are moving</p>
+            <img src={truckImage}  className="moving-truck-image" />
             </div>
         </div>
     );

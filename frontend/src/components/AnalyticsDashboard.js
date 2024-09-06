@@ -31,21 +31,21 @@ function Dashboard() {
     }
   };
 
-  return (
-    <div className="dashboard-container">
-      {/* Horizontal navigation bar */}
-      <nav className="navbar">
-        <div className="logo">Dashly X</div>
-        <ul className="menu">
-          <li onClick={() => bookingFormRef.current?.scrollIntoView({ behavior: 'smooth' })}>Book a Truck</li>
-          <li>Truck Details</li>
-          <li onClick={() => liveTrackingRef.current?.scrollIntoView({ behavior: 'smooth' })}>Live Tracking</li>
-          <li>Latest Updates</li>
-        </ul>
-        <div className="signout">
-          <SignOutButton /> {/* Log Out Button */}
-        </div>
-      </nav>
+    return (
+        <div className="dashboard-container">
+            {/* Horizontal navigation bar */}
+            <nav className="navbar">
+                <div className="logo">Dashly X</div>
+                <ul className="menu">
+                    <li onClick={scrollToBookingForm}>Book a Truck</li>
+                    <li>Truck Details</li>
+                    <li onClick={scrollToLiveTracking}>Live Tracking</li> {/* Scroll to live tracking section */}
+                    <li>Latest Updates</li>
+                </ul>
+                <div className="signout">
+                    <SignOutButton /> {/* Log Out Button */}
+                </div>
+            </nav>
 
       <main className="main-content">
         <header className="header">

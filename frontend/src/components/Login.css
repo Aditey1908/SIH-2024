@@ -42,6 +42,9 @@
   margin-bottom: 5px;
   display: block;
 }
+.login-left a{
+  color:orange;
+}
 
 .login-left input {
   width: 100%;
@@ -66,7 +69,10 @@
   display: flex;
   align-items: center;
   font-size: 14px;
+  color: #dfe6e9;
+  white-space: nowrap;
 }
+
 
 .login-options p {
   margin-right: 10px;
@@ -74,7 +80,8 @@
 }
 
 .login-options input[type="checkbox"] {
-  margin-right: 10px;
+  margin-left: 0px; /* Space between "Remember Me" and the checkbox */
+  margin-top:18px;
 }
 
 .login-options a {
@@ -101,7 +108,7 @@
 }
 
 .login-btn {
-  background-color: #007aff; /* Apple blue */
+  background-color: orange; /* Apple blue */
   color: white;
 }
 
@@ -119,8 +126,7 @@
   color: white;
   margin-top: 20px;
 }
-.google-btn {
-  background-color: #db4437; /* Google red */
+.google-btn a1 { /* Google red */
   color: white;
   margin-top: 20px;
 }
@@ -145,11 +151,6 @@
 .google-btn:hover {
   background-color: black;
 }
-
-.google-btn:hover {
-  background-color: black;
-}
-
 .login-google {
   text-align: center;
   margin-top: 30px;
