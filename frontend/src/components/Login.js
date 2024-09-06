@@ -83,7 +83,7 @@ function Login() {
                     <button type="submit" className="login-btn">Sign In</button>
                     <div className="login-google">
                         <p>or</p>
-                         <button type="button" onClick={handleGoogleSignIn} className="google-btn">Sign in with Google</button>
+                         <button type="button" onClick={handleGoogleSignIn} className="google-btn"><a1>Sign in with </a1><a2>G</a2><a3>O</a3><a4>O</a4><a5>G</a5><a6>L</a6><a7>E</a7></button>
                     </div>
                 </form>
                 <p>Don’t have an account? <a href="/signup">Sign Up</a></p>
