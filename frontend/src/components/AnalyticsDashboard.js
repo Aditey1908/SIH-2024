@@ -8,7 +8,8 @@ function Dashboard() {
     const [space, setSpace] = useState('');
     const [cost, setCost] = useState(0);
 
-    const bookingFormRef = useRef(null); // Create a ref for the booking section
+    const bookingFormRef = useRef(null); // Ref for the booking section
+    const liveTrackingRef = useRef(null); // Ref for the live tracking section
 
     const handleBookingSubmit = (e) => {
         e.preventDefault();
@@ -23,7 +24,11 @@ function Dashboard() {
     };
 
     const scrollToBookingForm = () => {
-        bookingFormRef.current?.scrollIntoView({ behavior: 'smooth' }); // Scroll to the booking form
+        bookingFormRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToLiveTracking = () => {
+        liveTrackingRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -32,9 +37,9 @@ function Dashboard() {
             <nav className="navbar">
                 <div className="logo">Dashly X</div>
                 <ul className="menu">
-                    <li onClick={scrollToBookingForm}>Book a Truck</li> {/* Scroll to booking form on click */}
+                    <li onClick={scrollToBookingForm}>Book a Truck</li>
                     <li>Truck Details</li>
-                    <li>Live Tracking</li>
+                    <li onClick={scrollToLiveTracking}>Live Tracking</li> {/* Scroll to live tracking section */}
                     <li>Latest Updates</li>
                 </ul>
                 <div className="signout">
@@ -89,15 +94,8 @@ function Dashboard() {
                     </div>
                 </section>
 
-                <section className="map-section">
-                    <h2>Live Truck Locations</h2>
-                    <div className="map-placeholder">
-                        <p>Map goes here</p>
-                    </div>
-                </section>
-
                 {/* Booking Form */}
-                <section ref={bookingFormRef} className="booking-form"> {/* Attach ref to this section */}
+                <section ref={bookingFormRef} className="booking-form"> {/* Attach ref to booking form */}
                     <h2>Book a Truck</h2>
                     <form onSubmit={handleBookingSubmit}>
                         <div>
@@ -119,7 +117,7 @@ function Dashboard() {
                             />
                         </div>
                         <div>
-                            <label>Amount of Space : </label>
+                            <label>Amount of Space:</label>
                             <select
                                 value={space}
                                 onChange={(e) => setSpace(e.target.value)}
@@ -132,7 +130,6 @@ function Dashboard() {
                                 <option value="20">20m³</option>
                                 <option value="25">25m³</option>
                                 <option value="30">30m³</option>
-                                {/* Add more options as needed */}
                             </select>
                         </div>
                         <button type="submit">Calculate Cost</button>
@@ -143,13 +140,14 @@ function Dashboard() {
                         </div>
                     )}
                 </section>
-                 {/* Placeholder for the map */}
-        <section className="map-section">
-          <h2>Live Truck Locations</h2>
-          <div className="map-placeholder">
-            <p>Map goes here</p>
-          </div>
-        </section>
+
+                {/* Live Tracking Section */}
+                <section ref={liveTrackingRef} className="map-section"> {/* Attach ref to live tracking section */}
+                    <h2>Live Truck Locations</h2>
+                    <div className="map-placeholder">
+                        <p>Map goes here</p>
+                    </div>
+                </section>
             </main>
         </div>
     );
