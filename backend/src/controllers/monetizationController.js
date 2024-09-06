@@ -12,7 +12,7 @@ exports.createBooking = async (req, res) => {
 
     // Calculate the cost
     bookings.forEach(booking => {
-        const { start_location, end_location, space_required } = booking; // Ensure these fields are present
+        const { start_location, end_location, space_required } = booking // Ensure these fields are present
         
         // Calculate cost
         const cost = space_required * 50; 

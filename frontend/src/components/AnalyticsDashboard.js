@@ -30,7 +30,13 @@ function Dashboard() {
       setBookingMessage('Failed to create booking. Please try again.');
     }
   };
+  const scrollToBookingForm = () => {
+    bookingFormRef.current?.scrollIntoView({ behavior: 'smooth' });
+};
 
+const scrollToLiveTracking = () => {
+    liveTrackingRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
     return (
         <div className="dashboard-container">
             {/* Horizontal navigation bar */}
