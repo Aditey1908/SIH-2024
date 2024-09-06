@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, createUserWithEmailAndPassword } from './firebaseConfig'; // Firebase import for sign-up
 import './SignUp.css'; // Import the styling
+import truckImage from '../images/Login_img.jpg';
 
 function SignUp() {
     const [email, setEmail] = useState('');
@@ -59,8 +60,7 @@ function SignUp() {
                 <p>Have an account? <a href="/login">Sign In</a></p>
             </div>
             <div className="signup-right">
-                <img src="moving-truck.png" alt="We are moving" className="moving-truck-image"/>
-                <p className="moving-text">We are moving</p>
+            <img src={truckImage}  className="moving-truck-image" />
             </div>
         </div>
     );
