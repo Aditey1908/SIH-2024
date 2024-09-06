@@ -27,12 +27,10 @@ function Dashboard() {
       <aside className="sidebar">
         <div className="logo">Dashly X</div>
         <ul className="menu">
-          <li>Dashboard</li>
           <li>Profile</li>
-          <li>Your Bookings</li>
+          <li>Recent Bookings</li>
+          <li>Truck Status</li>
           <li>History</li>
-          <li>Integrations</li>
-          <li>Settings</li>
           <li>Support</li>
           <li>About</li>
         </ul>
